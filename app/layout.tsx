@@ -1,0 +1,41 @@
+import type { Metadata } from 'next'
+import { Space_Grotesk, Inter } from 'next/font/google'
+import './globals.css'
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-display',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+})
+
+export const metadata: Metadata = {
+  title: 'Julián Arango Jaramillo — Freelancer & Developer',
+  description: 'Portafolio personal. Diseño y desarrollo de experiencias digitales únicas.',
+  keywords: ['freelancer', 'developer', 'diseño web', 'portafolio'],
+  openGraph: {
+    title: 'Julián Arango Jaramillo — Freelancer & Developer',
+    description: 'Portafolio personal. Diseño y desarrollo de experiencias digitales únicas.',
+    type: 'website',
+  },
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="es" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+      <body className="bg-base text-text font-body antialiased">
+        {children}
+      </body>
+    </html>
+  )
+}
