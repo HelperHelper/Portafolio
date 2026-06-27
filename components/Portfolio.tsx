@@ -23,7 +23,7 @@ const projects = [
     category: 'Landing Page',
     description: 'Sitio web para club  de eventos con diseño inmersivo, galería de experiencias pasadas y formulario de cotización integrado.',
     tech: ['Next.js', 'Tailwind CSS', 'Figma'],
-    video: '/videos/HawaicLub.mp4',
+    video: '/videos/Hawaiclub.mp4',
     poster: '',
     live: '#',
     github: null,
